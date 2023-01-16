@@ -1,0 +1,154 @@
+﻿@model BankManagementSystemMvc.Models.AddCustomerViewModel
+
+@{
+    ViewData["Title"] = "Register Customer";
+}
+
+<head>
+    <style>
+     
+    </style>
+</head>
+<body>
+
+    <h2>@ViewBag.msg</h2>
+   <div class="container">
+     <h4 class="text-success text-center">Register New Customer</h4>
+      <form asp-action="AddCustomer" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            @if (ViewBag.msg == "Customer Registered Successfully")
+            {
+                <h3 class="text-success">@ViewBag.msg</h3>
+            }
+
+            else if(ViewBag.msg=="OOPS........Something Went Wrong. Please Try Again")
+            {
+                <h3 class="text-danger">@ViewBag.msg</h3>
+            }
+
+            <hr />
+        <div class="d-flex justify-content-center">
+            <div>
+                <img id="addedImagePreview" class="rounded-pill w-75"/>
+            </div>
+          <div class="col-6 align-items-center">
+            <div class="form-group">
+                <label asp-for="picture" class="control-label"></label>
+                <input asp-for="picture" id="addedImage" class="form-control rounded-pill" />
+                <span asp-validation-for="picture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="firstName" class="control-label"></label>
+                <input asp-for="firstName" class="form-control rounded-pill" />
+                <span asp-validation-for="firstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lastName" class="control-label"></label>
+                <input asp-for="lastName" class="form-control rounded-pill" />
+                <span asp-validation-for="lastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control rounded-pill" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="phoneNumber" class="control-label"></label>
+                <input asp-for="phoneNumber" class="form-control rounded-pill" />
+                <span asp-validation-for="phoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="city" class="control-label"></label>
+                <input asp-for="city" class="form-control rounded-pill" />
+                <span asp-validation-for="city" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="address" class="control-label"></label>
+                <input asp-for="address" class="form-control rounded-pill" />
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+
+               <div class="form-group">
+                   <label asp-for="gender" class="control-label"></label>
+                   <select asp-for="gender" class="form-control rounded-pill">
+                        <option>Male</option>
+                        <option>Female</option>
+                   </select>
+                   <span asp-validation-for="gender" class="text-danger"></span>
+               </div>
+
+            <div class="form-group">
+                <label asp-for="birthDate" class="control-label"></label>
+                <input asp-for="birthDate" class="form-control rounded-pill" />
+                <span asp-validation-for="birthDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                   <label asp-for="accountType" class="control-label"></label>
+                   <select asp-for="accountType" class="form-control rounded-pill">
+                        
+                        <option>Savings</option>
+                        <option>Salary</option>
+                        <option>Checking</option>
+                   </select>
+                   <span asp-validation-for="gender" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="balance" class="control-label"></label>
+                <input asp-for="balance" class="form-control rounded-pill" />
+                <span asp-validation-for="balance" class="text-danger"></span>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="password" class="control-label"></label>
+                <input asp-for="password" class="form-control rounded-pill" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="confirmPassword" class="control-label"></label>
+                <input asp-for="confirmPassword" class="form-control rounded-pill" />
+                <span asp-validation-for="confirmPassword" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success form-control rounded-pill" />
+            </div>
+          </div>
+        </div>
+      </form>
+   </div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+  <script>
+
+    $(document).ready(()=>{
+      $('#addedImage').change(function(){
+        const file = this.files[0];
+        console.log(file);
+        if (file){
+          let reader = new FileReader();
+          reader.onload = function(event){
+            console.log(event.target.result);
+            $('#addedImagePreview').attr('src', event.target.result);
+          }
+          reader.readAsDataURL(file);
+        }
+      });
+    });
+    
+</script>
+}
+
+
+    </body>

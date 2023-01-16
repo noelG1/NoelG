@@ -1,0 +1,116 @@
+﻿@model CustomerServiceRepresentativeDoubleView
+
+@{
+    ViewData["Title"] = "Edit Customer Service Representative";
+}
+
+    <div>
+      
+        <form asp-action="EditCustomerServiceRepresentative" id="editForm" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <img src="~/@Model.representative.picture" id="addedImagePreview" class="w-25 l-25" />
+
+            <input type="hidden" asp-for="representative.id" />
+            <div class="form-group">
+                <label asp-for="viewModel.picture"></label>
+                <input asp-for="viewModel.picture" id="addedImage" class="form-control rounded-pill" />
+                <span asp-validation-for="viewModel.picture" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="representative.firstName"></label>
+                <input asp-for="representative.firstName" class="form-control rounded-pill" />
+                <span asp-validation-for="representative.firstName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="representative.lastName"></label>
+                <input asp-for="representative.lastName" class="form-control rounded-pill" />
+                <span asp-validation-for="representative.lastName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="representative.email"></label>
+                <input asp-for="representative.email" class="form-control rounded-pill"/>
+                <span asp-validation-for="representative.email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="representative.phoneNumber"></label>
+                <input asp-for="representative.phoneNumber" class="form-control rounded-pill" />
+                <span asp-validation-for="representative.phoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+              <label asp-for="representative.city"></label>
+              <input asp-for="representative.city" class="form-control rounded-pill" />
+              <span asp-validation-for="representative.city" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+              <label asp-for="representative.address"></label>
+              <input asp-for="representative.address" class="form-control rounded-pill" />
+              <span asp-validation-for="representative.address" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="representative.birthDate"></label>
+                <input asp-for="representative.birthDate" class="form-control rounded-pill" />
+                <span asp-validation-for="representative.birthDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="representative.salary"></label>
+                <input asp-for="representative.salary" class="form-control rounded-pill" />
+                <span asp-validation-for="representative.salary" class="text-danger"></span>  
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" id="btnEdit" value="Save" class="btn btn-success form-control" />
+            </div>
+
+        </form>
+    </div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+    <script>
+       $(document).ready(function(){
+            $("#btnEdit").click(function(){
+
+                var myFormData=$("#editForm").serialize();
+                alert("Success")
+
+                $.ajax({
+                    type:"Post",
+                    url:"/CustomerServiceRepresentatives/GetAllCustomerServiceRepresentatives",
+                    data:myFormData,
+                    success:function(){
+                        $("#myModal").modal("hide");
+                    }
+                   
+                })
+            })
+       })  
+
+        $(document).ready(() => {
+            $('#addedImage').change(function () {
+                const file = this.files[0];
+                console.log(file);
+                if (file) {
+                    let reader = new FileReader();
+                    reader.onload = function (event) {
+                        console.log(event.target.result);
+                        $('#addedImagePreview').attr('src', event.target.result);
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
+

@@ -1,0 +1,90 @@
+﻿@model BankManagementSystemApi.Models.Transaction
+@{
+    ViewData["Title"] = "Money Deposit";
+    var actionChoice = "";
+}
+
+<h1>Money Deposit</h1>
+
+<h4>Transaction</h4>
+<hr />
+@if (ViewBag.msg == "Transaction Successfull"){
+    <h3 class="text-success">Transaction successfully committed</h3>
+}
+else if (ViewBag.msg == "OOPS........Something Went Wrong, Please Try Again")
+{
+    <h3 class="text-danger">Transaction failed to committ,please try again!</h3>
+}
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MoneyDeposit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="@actionChoice" class="control-label">Action</label>
+                <select class="form-control rounded-pill" asp-for="@actionChoice">
+                    <option>Deposit</option>
+                    <option>Withdraw</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="receiver" class="control-label">Account Number</label>
+                <input asp-for="receiver" id="accountNumber" class="form-control rounded-pill" />
+                <a href="#" onclick="Details(55555555555)"><i class="fa fa-info"></i> </a>
+                <span asp-validation-for="receiver" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="amount" class="control-label">Amount</label>
+                <input asp-for="amount" class="form-control rounded-pill" />
+                <span asp-validation-for="amount" class="text-danger"></span>
+            </div>
+            
+           
+           <div class="form-group">
+                <input type="submit" value="Execute Action" class="btn btn-success form-control rounded-pill" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="GetAllCustomers" asp-controller="Customers">All Customers</a>
+</div>
+
+<div class="modal fade" id="myModal">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title text-center text-success">Profile</h3>
+            </div>
+
+            <div class="modal-body" id="myModalBodyDiv">
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+    <script>
+        
+       /* var accountNumber = document.getElementById("accountNumber");
+        window.onload = function () {
+            accountNumber.addEventListener("input", function () {
+                console.log(accountNumber.value);
+            });
+        } */
+        var Details = function (receiver) {
+            var url = "/Transactions/GetCustomerByAccountNumber/"+receiver;
+
+            $("#myModalBodyDiv").load(url, function () {
+                $("#myModal").modal("show");
+
+            })
+        }
+
+        
+    </script>
+

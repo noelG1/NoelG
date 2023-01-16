@@ -1,0 +1,65 @@
+﻿@using BankManagementSystemApi.Models
+@using NonFactors.Mvc.Grid
+@model IEnumerable<Transaction>
+@{
+    ViewData["Title"] = "New Transactions";
+    DateTime date=DateTime.Today;
+}
+
+
+
+    <input asp-for="@date" id="searchByDate" type="search" class="form-control rounded-pill" />
+    <input type="submit" onclick="GetTransactionsByDate()"/>
+
+
+@(Html
+
+        .Grid(Model)
+        .Build(columns =>
+        {
+            columns.Add(model => Html.CheckBox("Transaction" + model.uniqueReference));
+            columns.Add().RenderedAs((model, row) => row + 1).Titled("#").Css("text-center");
+            columns.Add(model => model.type).Titled("Type");
+            columns.Add(model => model.receiver).Titled("Receiver");
+            columns.Add(model => model.sender).Titled("sender");
+            columns.Add(model => model.dateTime).Titled("Date");        
+
+        })
+        .Using(GridFilterMode.Header)
+        .Empty("No data found")
+        .Filterable()
+        .Sortable()
+        .Pageable()
+        )
+
+<div class="modal fade" id="myModal">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title text-center text-success">Edit Customer Service Representative</h3>
+            </div>
+
+            <div class="modal-body" id="myModalBodyDiv">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+   // var searchByDate=document.getElementById("#searchByDate");
+    var GetTransactionsByDate = function () {
+        var url = "/Transactions/GetTransactionsByDate/";
+
+        $("#myModalBodyDiv").load(url, function () {
+            $("#myModal").modal("show");
+
+        })
+
+    }
+</script>
+        

@@ -1,0 +1,28 @@
+﻿@using BankManagementSystemApi.Models
+@using NonFactors.Mvc.Grid
+@model IEnumerable<Transaction>
+@{
+    ViewData["Title"] = "Transactions";
+}
+
+
+@(Html
+
+        .Grid(Model)
+        .Build(columns =>
+        {
+            columns.Add(model => Html.CheckBox("Transaction" + model.uniqueReference));
+            columns.Add().RenderedAs((model, row) => row + 1).Titled("#").Css("text-center");
+            columns.Add(model => model.type).Titled("Type");
+            columns.Add(model => model.receiver).Titled("Receiver");
+            columns.Add(model => model.sender).Titled("sender");
+            columns.Add(model => model.dateTime).Titled("Date");
+
+        })
+        .Using(GridFilterMode.Header)
+        .Empty("No data found")
+        .Filterable()
+        .Sortable()
+        .Pageable()
+        )
+

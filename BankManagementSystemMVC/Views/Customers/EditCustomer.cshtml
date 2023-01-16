@@ -1,0 +1,99 @@
+﻿@model CustomerDoubleView
+
+@{
+    ViewData["Title"] = "Edit Customer";
+}
+
+<div class="text-center">
+
+    <form asp-action="EditCustomer" id="editForm" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <img src="~/@Model.customer.picture" id="addedImagePreview" class="w-25 l-25" />
+
+        <input type="hidden" asp-for="customer.id" />
+        <div class="form-group">
+            <label asp-for="viewModel.picture"></label>
+            <input asp-for="viewModel.picture"  id="addedImage" class="form-control rounded-pill" />
+            <span asp-validation-for="viewModel.picture" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="customer.firstName"></label>
+            <input asp-for="customer.firstName" class="form-control rounded-pill" />
+            <span asp-validation-for="customer.firstName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="customer.lastName"></label>
+            <input asp-for="customer.lastName" class="form-control rounded-pill" />
+            <span asp-validation-for="customer.lastName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="customer.email"></label>
+            <input asp-for="customer.email" class="form-control rounded-pill" />
+            <span asp-validation-for="customer.email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="customer.phoneNumber"></label>
+            <input asp-for="customer.phoneNumber" class="form-control rounded-pill" />
+            <span asp-validation-for="customer.phoneNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="customer.city"></label>
+            <input asp-for="customer.city" class="form-control rounded-pill" />
+            <span asp-validation-for="customer.city" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="customer.address"></label>
+            <input asp-for="customer.address" class="form-control rounded-pill" />
+            <span asp-validation-for="customer.address" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="customer.birthDate"></label>
+            <input asp-for="customer.birthDate" max="" min="@DateTime.Now.AddYears(-100).ToString("dd,mm,yy")" class="form-control rounded-pill" />
+            <span asp-validation-for="customer.birthDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="customer.balance"></label>
+            <input asp-for="customer.balance" class="form-control rounded-pill" />
+            <span asp-validation-for="customer.balance" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <input type="submit" id="btnEdit" value="Save" class="btn btn-success form-control rounded-pill" />
+        </div>
+
+    </form>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+
+
+    $(document).ready(() => {
+        $('#addedImage').change(function () {
+            const file = this.files[0];
+            console.log(file);
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function (event) {
+                    console.log(event.target.result);
+                    $('#addedImagePreview').attr('src', event.target.result);
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+
+</script>

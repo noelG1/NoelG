@@ -1,0 +1,184 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BankManagementSystemApi
+build_property.RootNamespace = BankManagementSystemApi
+build_property.ProjectDir = C:\Users\NoelG\Desktop\ASP.NET\BankManagementSystemApi\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\NoelG\Desktop\ASP.NET\BankManagementSystemApi
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemIdentity/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1JZGVudGl0eVxQYWdlc1xFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemIdentity/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1JZGVudGl0eVxQYWdlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemIdentity/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1JZGVudGl0eVxQYWdlc1xQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemIdentity/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1JZGVudGl0eVxQYWdlc1xTaGFyZWRcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemIdentity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1JZGVudGl0eVxQYWdlc1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemIdentity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1JZGVudGl0eVxQYWdlc1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/CustomerServiceRepresentatives/AddCustomerServiceRepresentative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJTZXJ2aWNlUmVwcmVzZW50YXRpdmVzXEFkZEN1c3RvbWVyU2VydmljZVJlcHJlc2VudGF0aXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/CustomerServiceRepresentatives/CustomerServiceRepresentativeHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJTZXJ2aWNlUmVwcmVzZW50YXRpdmVzXEN1c3RvbWVyU2VydmljZVJlcHJlc2VudGF0aXZlSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/CustomerServiceRepresentatives/DeleteCustomerServiceRepresentative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJTZXJ2aWNlUmVwcmVzZW50YXRpdmVzXERlbGV0ZUN1c3RvbWVyU2VydmljZVJlcHJlc2VudGF0aXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/CustomerServiceRepresentatives/EditCustomerServiceRepresentative.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJTZXJ2aWNlUmVwcmVzZW50YXRpdmVzXEVkaXRDdXN0b21lclNlcnZpY2VSZXByZXNlbnRhdGl2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/CustomerServiceRepresentatives/GetAllCustomerServiceRepresentatives.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJTZXJ2aWNlUmVwcmVzZW50YXRpdmVzXEdldEFsbEN1c3RvbWVyU2VydmljZVJlcHJlc2VudGF0aXZlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/CustomerServiceRepresentatives/GetAllPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJTZXJ2aWNlUmVwcmVzZW50YXRpdmVzXEdldEFsbFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/CustomerServiceRepresentatives/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJTZXJ2aWNlUmVwcmVzZW50YXRpdmVzXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/CustomerServiceRepresentatives/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJTZXJ2aWNlUmVwcmVzZW50YXRpdmVzXFJlc2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Customers/AddCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJzXEFkZEN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Customers/CustomerHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJzXEN1c3RvbWVySG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Customers/DeleteCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJzXERlbGV0ZUN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Customers/EditCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJzXEVkaXRDdXN0b21lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Customers/GetAllCustomers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJzXEdldEFsbEN1c3RvbWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Customers/GetCustomerByAccountNumber.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJzXEdldEN1c3RvbWVyQnlBY2NvdW50TnVtYmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Customers/GetCustomerById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJzXEdldEN1c3RvbWVyQnlJZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Customers/MoneyTransfer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJzXE1vbmV5VHJhbnNmZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Customers/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJzXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Customers/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcQ3VzdG9tZXJzXFJlc2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Employees/Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcRW1wbG95ZWVzXEFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Managers/AddBankEntity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcTWFuYWdlcnNcQWRkQmFua0VudGl0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Managers/GetNewTransactions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcTWFuYWdlcnNcR2V0TmV3VHJhbnNhY3Rpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Managers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcTWFuYWdlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Shared/MvcGrid/_Grid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcU2hhcmVkXE12Y0dyaWRcX0dyaWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Shared/MvcGrid/_Pager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcU2hhcmVkXE12Y0dyaWRcX1BhZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Shared/NewCustomers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcU2hhcmVkXE5ld0N1c3RvbWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Transactions/GetTransactionsByDate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcVHJhbnNhY3Rpb25zXEdldFRyYW5zYWN0aW9uc0J5RGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Transactions/MoneyDepositAndWithdraw.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcVHJhbnNhY3Rpb25zXE1vbmV5RGVwb3NpdEFuZFdpdGhkcmF3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Transactions/MoneyTransfer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcVHJhbnNhY3Rpb25zXE1vbmV5VHJhbnNmZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemIdentity/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1JZGVudGl0eVxQYWdlc1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-5qgylcnzrb
+
+[C:/Users/NoelG/Desktop/ASP.NET/BankManagementSystemApi/BankManagementSystemMVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QmFua01hbmFnZW1lbnRTeXN0ZW1NVkNcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-x0mvb28u12

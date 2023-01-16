@@ -1,0 +1,42 @@
+﻿@using BankManagementSystemApi.Models
+@using NonFactors.Mvc.Grid
+@model IEnumerable<Customer>
+@{
+    ViewData["Title"] = "New Transactions";
+}
+
+@(Html
+
+        .Grid(Model)
+        .Build(columns =>
+        {
+            columns.Add(model => Html.CheckBox("Customer" + model.id));
+            columns.Add().RenderedAs((model, row) => row + 1).Titled("#").Css("text-center");
+            columns.Add(model => model.picture).Titled("Picture");
+            columns.Add(model => model.firstName).Titled("First Name");
+            columns.Add(model => model.lastName).Titled("Last Name");
+            columns.Add(model => model.phoneNumber).Titled("Phone Number");
+
+        })
+        .Using(GridFilterMode.Header)
+        .Empty("No data found")
+        .Filterable()
+        .Sortable()
+        .Pageable()
+        )
+
+<div class="modal fade" id="myModal">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title text-center text-success">Edit Customer Service Representative</h3>
+            </div>
+
+            <div class="modal-body" id="myModalBodyDiv">
+            </div>
+        </div>
+    </div>
+
+</div>

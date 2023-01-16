@@ -1,0 +1,87 @@
+﻿@using BankManagementSystemIdentity.Models
+@using BankManagementSystemMVC.Controllers
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> signInManager
+@inject ManagersController controller
+
+<head>
+    <style>
+        .box:hover{
+            transform:scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container col-md-5 text-center">
+        <h2 class="text-success text-center py-5">Welcome <br /> @User.Identity.Name</h2>
+        <hr />
+        <div class="box bg-success rounded-pill">
+            <h3>Customers</h3>
+            <h4>@controller.CountCustomers()</h4>
+        </div>
+
+        <div onclick="NewCustomers()" class="box bg-success rounded-pill">
+            <h3>New Customers</h3>
+        </div>
+
+        <div onclick="Profile()" class="box bg-success rounded-pill">
+            <h3>Profile</h3>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h3 class="modal-title text-center text-success">Profile</h3>
+                </div>
+
+                <div class="modal-body" id="myModalBodyDiv">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="myModal2">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h3 class="modal-title text-center text-success">New Customers</h3>
+                </div>
+
+                <div class="modal-body" id="myModalBodyDiv2">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var Profile = function () {
+            var url = "/CustomerServiceRepresentatives/Profile/";
+
+            $("#myModalBodyDiv").load(url, function () {
+                $("#myModal").modal("show");
+
+            })
+
+        }
+
+        var NewCustomers = function () {
+            var url = "/Shared/NewCustomers/";
+
+            $("#myModalBodyDiv2").load(url, function () {
+                $("#myModal2").modal("show");
+
+            })
+
+        }
+    </script>
+</body>

@@ -1,0 +1,124 @@
+﻿@*@model IEnumerable<BankManagementSystemApi.Models.CustomerServiceRepresentative>*@
+
+    @model CustomerServiceRepresentativeDoubleView
+
+@using NonFactors.Mvc.Grid
+<html>
+<head>
+    <style>
+        td {
+            background: #eeebe3;
+            border-radius: 10px;
+        }
+
+        th {
+            background: #f4f5f0;
+        }
+    </style>
+
+
+</head>
+
+
+<a asp-action="AddCustomerServiceRepresentative" asp-controller="CustomerServiceRepresentatives">Add Customer Service Representative</a>
+   
+@if (ViewBag.msg == "Customer Service Representative Edited Successfully")
+{
+    <h3 class="text-success">@ViewBag.msg</h3>
+}
+
+else if (ViewBag.msg == "OOPS........Something Went Wrong, Please Try Again")
+{
+    <h3 class="text-danger">@ViewBag.msg</h3>
+}
+<h2>@ViewBag.msg</h2>
+    @(Html
+        .Grid(Model.representatives)
+        .Build(columns =>
+        {
+            columns.Add(model => Html.CheckBox("Customer Service Representative" + model.id));
+            columns.Add().RenderedAs((model, row) => row + 1).Titled("#").Css("text-center");
+            columns.Add(model => model.firstName).Titled("Name");
+            columns.Add(model => model.lastName).Titled("Surname");
+            columns.Add(model => model.phoneNumber).Titled("Phone Number");
+            columns.Add(model => model.birthDate).Titled("Age");
+            columns.Add(model => $"<a data-id=\"{model.id}\" href='#' onclick='Edit(\"{model.id}\");'><i class='fa fa-edit text-success'></i></a>&nbsp &nbsp<a data-id=\"{model.id}\" href='#' onclick='Delete(\"{model.id}\");'><i class='fa fa-trash text-danger'></i></a>").Encoded(false).Titled("Actions");
+            
+        })
+        .Using(GridFilterMode.Header)
+        .Empty("No data found")
+        .Filterable()
+        .Sortable()
+        .Pageable()
+        )
+
+    
+
+    <div class="modal fade" id="myModal">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h3 class="modal-title text-center text-success">Edit Customer Service Representative</h3>
+                </div>
+
+                <div class="modal-body" id="myModalBodyDiv">
+                  
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+
+
+
+
+ 
+    
+   <script src="~/js/mvc-grid.js" ></script>
+        <script>
+        document.querySelectorAll(".mvc-grid").forEach(element => new MvcGrid(element));
+        </script>
+
+    <script>
+
+        var editForm = document.getElementById('editForm');
+        editForm.style.display = 'none';
+
+        function ShowEditForm() {
+           var editForm = document.getElementById('editForm');
+            editForm.style.display = 'block';
+        }
+
+        function HideEditForm() {
+            var editForm = document.getElementById('editForm');
+            editForm.style.display = 'none';
+        }
+    </script>
+
+    <script>
+        var Edit=function(id){
+            var url = "/CustomerServiceRepresentatives/EditCustomerServiceRepresentative/"+id;
+
+            $("#myModalBodyDiv").load(url,function(){
+                $("#myModal").modal("show");
+
+            })
+           
+        }
+
+    var Delete = function (id) {
+        var url = "/CustomerServiceRepresentatives/DeleteCustomerServiceRepresentative/" + id;
+
+        $("#myModalBodyDiv").load(url, function () {
+            $("#myModal").modal("show");
+
+        })
+
+    }
+    </script>
+
+</html>

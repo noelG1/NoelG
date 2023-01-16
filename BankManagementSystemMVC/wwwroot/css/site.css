@@ -1,0 +1,51 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+
+header{
+    background:var(--header-primaryColor);
+    color:var(--header-secondaryColor);
+}
+
+body {
+    margin-bottom: 60px;
+    background: var(--primary-color);
+    color:var(--secondary-color);
+}
+
+footer {
+    background: var(--header-primaryColor);
+    color: var(--header-secondaryColor);
+}
+
+:root {
+    --primary-color:#eeebe3;
+    --secondary-color: black;
+    --tertiary-color:green;
+
+    --header-primaryColor:White;
+    --header-secondaryColor:Black;
+}
+
+.darkMode {
+    --primary-color: #1e272c;
+    --secondary-color: white;
+    --tertiary-color: grey;
+
+
+    --header-primaryColor: Black;
+    --header-secondaryColor: White;
+}

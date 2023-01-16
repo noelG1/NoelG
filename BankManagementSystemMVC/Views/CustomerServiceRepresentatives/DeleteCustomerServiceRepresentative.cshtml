@@ -1,0 +1,41 @@
+﻿@model BankManagementSystemMVC.Models.CustomerServiceRepresentativeDoubleView
+
+@{
+    ViewData["Title"] = "DeleteCustomerServiceRepresentative";
+}
+
+<h3 class="text-danger">Are you sure you want to delete @Model.representative.email</h3>
+<div>  
+    <form asp-action="DeleteCustomerServiceRepresentative">
+        
+        <img src="~/@Model.representative.picture" class="l-25 w-25">
+        <input type="hidden" asp-for="representative.id" />
+        <div class="form-group">
+            <label asp-for="representative.firstName"></label>
+            <input asp-for="representative.firstName" class="form-control rounded-pill" />
+            <span asp-validation-for="representative.firstName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="representative.lastName"></label>
+            <input asp-for="representative.lastName" class="form-control rounded-pill" />
+            <span asp-validation-for="representative.lastName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="representative.email"></label>
+            <input asp-for="representative.email" class="form-control rounded-pill" />
+            <span asp-validation-for="representative.email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="representative.phoneNumber"></label>
+            <input asp-for="representative.phoneNumber" class="form-control rounded-pill" />
+            <span asp-validation-for="representative.phoneNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" id="btnDelete" value="Delete" class="form-control rounded-pill btn btn-danger" />
+        </div>
+    </form>
+</div>

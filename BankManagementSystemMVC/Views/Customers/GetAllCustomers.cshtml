@@ -1,0 +1,109 @@
+﻿@using BankManagementSystemApi.Models
+@model CustomerDoubleView
+<html>
+    <head> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" />
+    <style>
+        td{
+            background:#eeebe3;
+            border-radius:10px;
+        }
+        th{
+            background:#f4f5f0;
+        }
+    </style>
+   
+
+    </head>
+
+  <body>
+   
+      <h2>@ViewBag.msg</h2>
+   <table id="dataTable" class="display" cellspacing="0" width="100%">
+     <thead>
+        <tr>        
+        <th>@Html.DisplayNameFor(x=>x.customer.picture)</th>
+        <th>@Html.DisplayNameFor(x=>x.customer.accountNumber)</th>
+        <th>@Html.DisplayNameFor(x=>x.customer.firstName)</th>
+        <th>@Html.DisplayNameFor(x=>x.customer.lastName)</th>
+        <th>@Html.DisplayNameFor(x=>x.customer.birthDate)</th>
+        <th>@Html.DisplayNameFor(x=>x.customer.email)</th>
+        <th>@Html.DisplayNameFor(x=>x.customer.phoneNumber)</th>
+        <th>@Html.DisplayNameFor(x=>x.customer.accountType)</th>
+        <th>@Html.DisplayNameFor(x=>x.customer.address)</th>
+        <th>@Html.DisplayNameFor(x=>x.customer.balance)</th>
+        <th>@Html.DisplayNameFor(x=>x.customer.registerDate)</th>
+        <th>Actions</th>
+      </tr>
+     </thead>
+    <tbody>
+      @foreach(var item in Model.customers)
+      {
+        
+          <tr>
+            <td><img src="~/@item.picture" class="h-75 w-75" /></td>
+            <td>@item.accountNumber</td>
+            <td>@item.firstName</td>
+            <td>@item.lastName</td>
+            <td>@item.birthDate</td>
+            <td>@item.email</td>
+            <td>@item.phoneNumber</td>           
+            <td>@item.accountType</td>
+            <td>@item.address</td>
+            <td>@item.balance</td>
+            <td>@item.registerDate</td>
+            <td>
+               <a><i class="fa fa-info text-primary"></i></a>
+               <a  onclick="Edit(@item.id)"><i class="fa fa-edit text-success"></i></a>
+               <a  onclick="Delete(@item.id)"><i class="fa fa-trash text-danger"></i></a>
+            </td>
+          </tr>
+       
+      }
+    </tbody>
+  </table>
+
+    <div class="modal fade" id="myModal">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="btn-close" data-dismiss="modal">&times;</a>
+                    <h3 class="modal-title text-center text-success"></h3>
+                </div>
+
+                <div class="modal-body" id="myModalBodyDiv">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/DataTable.js"></script>
+    <script>
+        var Edit = function (id) {
+            var url = "/Customers/EditCustomer/" + id;
+
+            $("#myModalBodyDiv").load(url, function () {
+                $("#myModal").modal("show");
+
+            })
+
+        }
+
+        var Delete = function (id) {
+            var url = "/Customers/DeleteCustomer/" + id;
+
+            $("#myModalBodyDiv").load(url, function () {
+                $("#myModal").modal("show");
+
+            })
+
+        }
+    </script>
+</body>
+</html>

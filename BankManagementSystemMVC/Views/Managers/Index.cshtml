@@ -1,0 +1,94 @@
+﻿@using BankManagementSystemIdentity.Models
+@using BankManagementSystemMVC.Controllers
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> signInManager
+@inject ManagersController controller
+
+
+<head>
+    <style>
+        .box{
+            background-color:burlywood;
+            width:250px;
+            height:100px;
+        }
+
+        .box:hover{
+             transform:scale(1.1);
+        }
+            a{
+                text-decoration:none;
+                color:black;
+            }
+
+            a:hover{
+                color:slategray
+            }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+         <h2 class="text-success text-center py-5">Welcome <br /> @User.Identity.Name</h2>
+
+      <div class="d-flex justify-content-center align-items-center">
+        <a asp-controller="Customers" asp-action="GetAllCustomers">
+         <div class="box rounded-pill text-center">
+             <h3>Customers</h3>
+             <h4>Total:@controller.CountCustomers()</h4>
+         </div>
+        </a>
+
+       <a asp-controller="CustomerServiceRepresentatives" asp-action="GetAllCustomerServiceRepresentatives">
+        <div class="box rounded-pill text-center">
+            <h3>Customer Service Representatives</h3>
+            <h4>Total:@controller.CountCustomerServiceRepresentatives()</h4>
+        </div>
+       </a>
+
+       <a asp-action="GetNewTransactions">
+         <div class="box rounded-pill text-center">
+           <h3>Recent Transactions</h3>
+           <h5>@controller.CountNewTransactions() Recent Transactions</h5>
+         </div>
+       </a>
+
+            <div onclick="Add()" class="box rounded-pill text-center">
+                <h3>Add New Customer/<br />Customer Service Representative</h3>
+                <h5>@controller.CountNewCustomers() New Customers</h5>
+                 <h5>@controller.CountCustomerServiceRepresentatives() New Customer Service Representatives</h5>
+            </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="myModal">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="btn-close" data-dismiss="modal">&times;</a>
+                    <h3 class="modal-title text-center text-success"></h3>
+                </div>
+
+                <div class="modal-body" id="myModalBodyDiv">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        var Add = function () {
+            var url = "/Managers/AddBankEntity/";
+
+            $("#myModalBodyDiv").load(url, function () {
+                $("#myModal").modal("show");
+
+            })
+
+        }
+    </script>
+
+</body>
